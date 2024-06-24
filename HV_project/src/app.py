@@ -86,7 +86,7 @@ def predict():
     date = request.form['date']
     threshold = float(request.form.get('threshold', 0.033))
     speed = int(request.form.get('speed', 1))
-    data_with_lags = pd.read_csv("data_with_lags2.csv", encoding='cp949')
+    data_with_lags = pd.read_csv("s3://outlierhunters/data/data_with_lags.csv", encoding='cp949')
     data_with_lags['측정시간'] = pd.to_datetime(data_with_lags['측정시간'])   # lags data의 측정시간을 datetime 형식으로 변환
     
     date_start = pd.to_datetime(date) #입력된 날짜를 datetime 형식으로 변환
@@ -141,7 +141,7 @@ def dashboard():
     cell_id = request.args.get('cell_id')
     specific_date = request.args.get('date')  # HTML에서 선택된 날짜 가져오기
 
-    data = pd.read_csv("avail_data2.csv", parse_dates=['측정시간'], encoding='cp949').sort_values('측정시간').dropna().reset_index(drop=True)
+    data = pd.read_csv("s3://outlierhunters/data/avail_data.csv", parse_dates=['측정시간'], encoding='cp949').sort_values('측정시간').dropna().reset_index(drop=True)
     df_cell = data[data['셀번호'] == cell_id]
     df_cell = df_cell[pd.to_datetime(df_cell['측정시간']).dt.date == pd.to_datetime(specific_date).date()]
     df_cell = df_cell.sort_values(by='측정시간')
