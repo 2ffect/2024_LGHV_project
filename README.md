@@ -40,16 +40,18 @@ Display_SensorData
 ```
 - HW/Server
 	- Window (ver 11 / AMD Ryzen 7 7730U / RAM 16)
-	- Ubuntu (ver )
+	- Amazon Linux (ver 2023)
 - Language
 	- Python (ver 3.11.5)
 - Tools
+	- Docker (ver 25.0.3)
 	- Github
 	- AWS
 	- Slack
 	- Notion
+	- JIRA
 - IDE
-	- Jupyter Lab (ver 2.2)
+	- Jupyter Notebook (ver 7.0.8)
 - Analysis Library
 	- Pandas (ver 2.2.2)
 	- Numpy (ver 1.26.4)
@@ -225,4 +227,4 @@ hellovison 사내 업무 효율 증대
 - 실시간 시각화 대시보드 제공 : 현재 셋톱박스 상태를 실시간으로 시각화하여 직접 확인 가능
 - 오류 시점의 빠른 파악 : 실시간 알림 서비스를 통해 오류 시점을 신속하게 파악 가능
 - 사전 알림 시스템 구축 : 오류가 발생하기 전에 관리자에게 e-mail로 알림을 제공하여, 사전에 문제를 인지하고 대응 가능
-<a href="#" class="btn--success" > 맨 위로 이동하기▲</a>
+<a href="#" class="btn--success" >
